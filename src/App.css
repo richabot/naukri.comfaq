@@ -389,7 +389,7 @@ text-decoration: underline;
 }
 
 .main{
-  /* border: 1px solid black; */
+  border: 1px solid black;
   width: 60%px;
 
   margin: 22px 80px 24px 169px;;
@@ -418,4 +418,10 @@ text-decoration: underline;
 
 body {
   overflow-x: hidden; /* Hide scrollbars */
+}
+
+.imagefix {
+  height: 226px;
+  width: 223px;
+  margin: auto;
 }

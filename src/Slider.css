@@ -18,9 +18,9 @@
     
 }
 .imagefix{
-    height: 301px;
-    width: 255px;
-    margin: auto;
+  height: 209px;
+  width: 227px;
+  margin: auto;
 }
 
 .boxbest{
@@ -246,3 +246,9 @@
 body {
     overflow-x: hidden; /* Hide scrollbars */
   }
+
+  .imagefix {
+    height: 226px;
+    width: 223px;
+    margin: auto;
+}
