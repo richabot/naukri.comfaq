@@ -1,6 +1,318 @@
 .App {
   text-align: center;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: unset;
+}
+
+body {
+  font-family: Arial,Tahoma,sans-serif;
+  padding: 0 3rem;
+}
+
+a, a:link, a:visited {
+  color: black;
+}
+
+/* UTILITY CLASSES */
+.text-purple {
+  color:#52327c;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-beige {
+  background-color: #f2f1ec;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-purple {
+  background-color: #52327c;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+/* TOP NAV */
+#top-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 1px solid rgb(156, 154, 154);
+  position: sticky;
+  /* top: 0; */
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 3rem;
+}
+
+.nav-link-container {
+  display: flex;
+  padding: 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav-link {
+  margin-left: 2px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: black;
+}
+
+.top-nav-link:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+#signin-button, .bottom-nav-link:hover, #tripadvisor-ukraine-ad-button, #pride-ad-button {
+  background-color: black;
+  color: white;
+}
+
+.bottom-nav-link a{
+  color: inherit;
+}
+
+#signin-button a {
+  color: inherit;
+}
+
+#signin-button:hover, #pride-ad-button:hover, #tripadvisor-ukraine-ad-button:hover{
+  background-color: rgb(59, 58, 58);
+}
+
+/* BOTTOM NAV */
+#bottom-nav-container {
+  height: 5rem;
+  margin-top: 1rem;
+}
+
+.bottom-nav-link {
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 4.5rem;
+  width: 16%;
+  cursor: pointer;
+}
+
+.bottom-nav-link a {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 16px 16px;
+}
+
+/* HEADER */
+/* #header {
+  margin: 1rem 0;
+  background-color: pink;
+  background-image: url("../../assets/img/search_bar_img.webp");
+  background-size: cover;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-bar {
+  background-color: white;
+ // background-image: url('../../assets/img/magnifying-glass-solid.svg');
+  background-position: 20px 50%;
+  background-size: 3%;
+  background-repeat: no-repeat;
+  padding-left: 60px;
+  border-radius: 30px;
+  box-shadow: 0 1px 10px rgb(74, 74, 74);
+  height: 4rem;
+  width: 50rem;
+  font-size: 1.5rem;
+  border: 0;
+  outline: none;
+} */
+
+/* TWO COLUMN AD STYLING */
+.two-column-ad-container {
+  margin: 4rem 0;
+  padding: 0 2rem;;
+  height: 28rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad-img {
+  height: 90%;
+  width: 50%;
+}
+
+.ad-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 45%;
+  padding: 0 3rem;
+}
+
+.ad-caption p {
+  margin-top: .5rem;
+  /* color:#333; */
+}
+
+.ad-button {
+  margin-top: 1rem;
+  padding: 16px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+#tripadvisor-ad-button:hover {
+  background-color: lightgray;
+}
+
+/* PLUS AD */
+#plus-ad-container {
+  margin: 1rem 0;
+  padding: 2rem 2rem;
+  background-color: #f2ecf9;
+  height: 25rem;
+  /* width: 100vw;
+  position: relative;
+  right: 3rem; */
+}
+
+/* #plus-ad-caption {
+  display: flex;
+  flex-direction: column;
+ // align-items: start;
+} */
+
+#plus-ad-carousel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.plus-ad-img-container {
+  height: 13rem;
+  width: 13rem;
+  padding: 1rem;
+  background-size: cover;
+}
+
+.plus-ad-img-container:hover {
+  box-shadow:inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+}
+
+.plus-ad-img-container a {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  color:white;
+  text-shadow: 0 0 5px black;
+  display: flex;
+}
+
+.plus-ad-img-container h2 {
+  align-self: flex-end;
+}
+
+/* #plus-ad-img-york {
+  background-image: url("../../assets/img/tripadvisor_york.jpg");
+}
+
+#plus-ad-img-miami {
+  background-image: url("../../assets/img/tripadvisor_miami.jpg");
+}
+
+#plus-ad-img-vegas {
+  background-image: url("../../assets/img/tripadvisor_vegas.jpg");
+}
+
+#plus-ad-img-lucas {
+  background-image: url("../../assets/img/tripadvisor_lucas.jpg");
+}
+
+#plus-ad-img-austin {
+  background-image: url("../../assets/img/tripadvisor_austin.jpg");
+} */
+
+/* FOOTER */
+footer {
+  background-color: #faf1ed;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  padding: 2rem 3rem;
+}
+
+footer a{
+  font-weight: bold;
+}
+
+#footer-nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-link-container, #left-link-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-link-container a{
+  display: block;
+}
+
+#footer-nav-container{
+  font-size: 14px;
+}
+
+#footer-nav-container h3{
+  font-weight: lighter;
+}
+
+#footer-nav-container a{
+line-height: 1.5rem;
+font-weight: 600;
+}
+
+#footer-nav-container a:hover{
+text-decoration: underline;
+}
+
+#right-link-container select {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin: 2rem 0; 
+  padding: 8px 16px;
+  width: 12rem;
+  font-weight: bold;
+  outline: none;
+}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +347,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  margin: 1rem 0;
+  background-color: pink;
+  background-image: url("https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans@2x.webp");
+  background-size: cover;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1035px;
+
+  height: 348px;
+}
+
+.search-bar {
+  background-color: white;
+  background-image: url('data:image/webp;base64,UklGRroDAABXRUJQVlA4IK4DAABQGACdASqIAIgAPpFEn0qlo6MhqLOo8LASCWlu3QjwH8BjZO9MRE4FcrKwxkvkA/Nf8v7A36xdaT0bCgwbV5oHYpsuBqS7e7/6SQZ96Tfr2amuhIRvL666psPYGXYHE7eVDelQtb4Eu0SOtmvABS43BWLEs/XAQ7Bn+/+0cuf9J/x0OGu5L5SGSUqV3+bPwWYM2ZFd5Lz6xpbw8PJFxluCgYo/2Qqs3PgkOR5MhQw76zTNGX4L7Ep9Mt1tXmzkQk0NpeUv3b7T682qoAD++gKA08q3I9PYpWM24IhorTHQ7mjy0BaCMZVAwORY92U/JoVf4MztFuBd0umyLWC5BsRbMYkfcQK8vhbT7GdFSkDldMsbSKWO32Z+w0Z+8/PZbBHN0K+dxGjG207yNaosoJ8Xd8IOQSPTxqVqlMN7IQy/792xI6NcTx4WSQzYTpwoRon7moz7Zjd9tL9EkDlIKquUnXQuqW+UlLjR9z1egxvoa4gSnEDZnWfbd63JN2gwor5bHTBMDNRAisly2C1KNYnvwR+0l/4yYDztEs45+cevfuI59Uq4tyQfb5zlC3K/BHMfTsdz+o3IRGsZzm6yLJACbHVTryylbGFJrLvUIDrtieUdXSz7Ml5CbAABqiONS9pCu+rg4EJSxHJzplturXmt3E8spmf7V7pFiBR6awv1hpVYJrU9vY4YczuKfnd7kjPzRel+y046RfT5rvGfmro0/yeqkGAh7tNMJ7l79qX/+a/AoxWKHv5JNpJ0SJ27TLYHBBCMm4c4yqt+buzlhmfAr0xq4h/q3Qe5zPngwnivk2s631ffZhzHd1qDXT6JlGOyd+hEz986A3t69o4SspICUIK+kTaYoBai1rTEOihz7mRAXJpLBHGSETAoEUpw0LbPFqOUFOiHiWM7b2ighnY7eXKRC9VcxDccuGdHynlVC1GaYohYaeun9+0yw3t6i5AeuTy60Hl76DE9aKFZhloX3L1EysYq+otpaAk+8Hhj0VEJeokx/uCaCBiF/2fpiKFF8VUGS3/Sf0au9vyCsyHS7USGYQemUr0sxOi8qujszIfVX1DtY33xepXyxyOjp8aCeb+pI0bkbjjWhaRZEiKjtyVkkz6AUiS62QmL2+HWt9ldbKDizZhCfo5osFYY5/5VPUv401vJxJpCNVMlFgrZ4sciJDTksGc3cUMWeyUQ6yeGjdS0Cf4NBo5T8MQlAw4SsHg2bP/Dx3c3q/X5YUtifaNhdlj5zy2ygAAAAAA=');
+  background-position: 20px 50%;
+  background-size: 3%;
+  background-repeat: no-repeat;
+  padding-left: 60px;
+  border-radius: 30px;
+  box-shadow: 0 1px 10px rgb(74, 74, 74);
+  height: 60px;
+  width: 783px;
+  font-size: 1.5rem;
+  border: 0;
+  outline: none;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main{
+  /* border: 1px solid black; */
+  width: 60%px;
+
+  margin: 22px 80px 24px 169px;;
+}
+.ad-logo{
+  display: flex;
+  
+
+  margin-bottom: 26px;
+}
+
+
+
+.logo-img {
+  width: 2rem;
+  border-radius: 40%;
+  margin-right: 7px;
+  margin-top: -7px;
+}
+
+.ad-caption p {
+  margin-top: 0.5rem;
+  /* color: #333; */
+  line-height: 35px;
+}
+
+body {
+  overflow-x: hidden; /* Hide scrollbars */
 }
