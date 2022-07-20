@@ -252,3 +252,12 @@ body {
     width: 223px;
     margin: auto;
 }
+
+#top-nav-container{
+  position: sticky !important;
+  top:0px;
+}
+#navbar{
+  position: sticky;
+  top:0px;
+}

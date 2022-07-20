@@ -9,7 +9,7 @@ import "./Slider.css"
 import list2 from './data1'
 const Homepage = () => {
   return (
-   <div>
+   <div >
     {/* start of  header */}
     
     {/* end of header */}
@@ -56,6 +56,7 @@ const Homepage = () => {
                 </li>
             </ul>
         </div>
+        </div>
         <div id="bottom-nav-container">
             <ul class="nav-link-container">
                 <li class="bottom-nav-link">
@@ -96,7 +97,7 @@ const Homepage = () => {
                 </li>
             </ul>
 
-        </div>
+       
     </div>
         <div className="header">
     <form action="">
