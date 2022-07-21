@@ -1,20 +1,21 @@
 
 import './App.css';
-// import Footerforother from './Footerforother';
+import Cardcarousel from './Cardcarousel';
+//  import Footerforother from './Footerforother';
 // import Footer from './Footer';
- import Homepage from './Homepage';
+//  import Homepage from './Homepage';
 
 //import ThingsToDo from './ThingsToDo';
 
 function App() {
   return (
     <div className="App">
-       <Homepage/>
+     
       {/* <Footer/>  */}
       {/* <ThingsToDo/> */}
     {/* <Footerforother/> */}
 
- 
+ <Cardcarousel/>
     </div>
   );
 }

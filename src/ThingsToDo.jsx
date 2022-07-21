@@ -4,10 +4,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 // import {Carousel} from 'react-responsive-carousel'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faPencil,faHeart,faBell } from '@fortawesome/free-solid-svg-icons'
-import Carousel from 'react-grid-carousel'
+//import Carousel from 'react-grid-carousel'
 // import list from './data'
 import "./Slider.css"
-import list2 from './data1'
+//import list2 from './data1'
 const ThingsToDo = () => {
   return (
     <div className='main'>
@@ -17,7 +17,7 @@ const ThingsToDo = () => {
         <div id="top-nav-container">
             <div class="logo">
                 <img class="logo-img" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="trip advisor logo: owl eyes and beak" />
-                
+                <input type="text" placeholder={<FontAwesomeIcon icon={faHeart} />} />
             </div>
 
             <ul class="nav-link-container">
@@ -102,111 +102,71 @@ const ThingsToDo = () => {
 <div className='hoverBox'>
     {/* <h3>MAKEUP</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
-<button class="dropbtn">MAKEUP 
+<button class="dropbtn">Goa 
 </button>
 <div class="dropdown-content">
-<a href="###">LIPS</a>
-<a href="###">FACE</a>
-<a href="###">EYE</a>
+<a href="###">Hotels</a>
+<a href="###">Restuarant</a>
+<a href="###">eye</a>
 </div> </div> </div> 
     {/* <h3>BRUSHES</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
-<button class="dropbtn">BRUSHES 
+<button class="dropbtn">Hotels 
 </button>
 <div class="dropdown-content">
-<a href="###">FACE BRUSHES</a>
-<a href="###">EYE BRUSHES</a>
+<a href="###">place</a>
+<a href="###">sort</a>
 </div> </div> </div>
     {/* <h3>SKINCARE</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
-<button class="dropbtn">SKINCARE 
-</button>
+<button class="dropbtn">Places to Visit</button>
 <div class="dropdown-content">
-<a href="###"> MOISTURIZERS</a>
-<a href="###">SUNSCREEN</a>
-<a href="###">SETTING MISTS</a>
-<a href="###">COFFEE CULTURE RANGE</a>
-<a href="###">SHEET MASK COMBO</a>
-<a href="###">CITRUS GOT REAL RANGE</a>
+<a href="###"> tourist</a>
+<a href="###">SUNS </a>
+<a href="###">SETTING</a>
+<a href="###">COFFEE RANGE</a>
+<a href="###"> COMBO</a>
+<a href="###">RANGE</a>
 <a href="###">AQUAHOLIC RANGE</a>
-<a href="###">MASKS</a>
+<a href="###">meets</a>
 </div> </div> </div>
     {/* <h3>TRENDING</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
-<button class="dropbtn">TRENDING 
+<button class="dropbtn">Restuarant
 </button>
 <div class="dropdown-content">
-<a href="###">SUGER MARCH STATION</a>
-<a href="###">MAKEUP KITS</a>
+<a href="###"> STATION</a>
+<a href="###"> KITS</a>
 <a href="###">BESTSELLERS</a>
-<a href="###">SUGAR SETS</a>
+<a href="###">SETS</a>
 <a href="###">VELUE SETS</a>
 </div> </div> </div>
     {/* <h3>BLOG</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
-<button class="dropbtn">BLOG 
+<button class="dropbtn">Flights 
 </button>
 <div class="dropdown-content">
 <a href="###">FEATURED</a>
-<a href="###">MACKUP</a>
-<a href="###">SKINCARE</a>
+<a href="###">MUP</a>
+<a href="###">CARE</a>
 </div> </div> </div>
     {/* <h3>OFFERS</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
                               {/* orignal link usewd */}
-<button class="dropbtn"><a href="/"> OFFERS </a>    
+<button class="dropbtn"><a href="/"> Holiday Home</a>    
 </button>
 </div> </div>
     {/* <h3>STORES</h3> */}
     <div className="topnav" id="myTopnav"><div class="dropdown">
                                  {/* orignal link usewd */}
-<button class="dropbtn"><a href="/"> STORES </a>    
+<button class="dropbtn"><a href="/"> Shopping </a>    
 </button>
 </div> </div>
 </div>
         </div>
  
     </div>
-    <div className='flex1'>
-   <p className='p1'>Asia {">"}India {">"}Telangana {">"}Hyderabad{">"} DistrictHyderabad {">"}Places to visit in Hyderabad</p>
-        <p>Top Things to Do in Hyderabad, Telangana</p>
-   </div>
-       <div className='flex1'>
-       <h1 >Places to Visit in Hyderabad</h1>
-       <button className='btn11'>Join</button>
-       </div>
-
-{/* slider1 */}
-
-<div className="fourth_box">
-    <h2 className='leftrech1'>Top destinations for beach lovers </h2>
-    <p className='leftrec'>Recommended based on your activity</p>
-   <div className="boxbest">
-   <Carousel cols={4} rows={1} gap={5} loop
-    >
-{list2.map((item) => {
- return(
-  <Carousel.Item>
-    <div className="flexit" key={item.id}>
-  
-  <div className='container'>
-  <img className="imagefix" src={item.img} alt="abc" />
-  
-     
-
-  
-  <h3 className='bottom-right'>{item.title}</h3>
-  </div>
-      
-    </div>
-  </Carousel.Item>
-      )
-}
-)}
-{/* ... */}
-</Carousel>
-   </div>
-</div>
+   
 
 
     </div>
