@@ -107,6 +107,7 @@
     width: 99%;
     margin-bottom: 44px;
     /* border: 1px solid green; */
+    border-bottom: 1px solid black;
     display: flex;
     /* justify-content: flex-start; */
   }
@@ -189,3 +190,29 @@
     margin-right: 74px;
     border-radius: 30px;
    }
+
+
+   .search-1 {
+    background-color: white;
+    background-image: url(data:image/webp;base64,UklGRroDAABXRUJQVlA4IK4DAABQGACdASqIAIgAPpFEn0qlo6MhqLOo8LASCWlu3QjwH8BjZO9MRE4FcrKwxkvkA/Nf8v7A36xdaT0bCgwbV5oHYpsuBqS7e7/6SQZ96Tfr2amuhIRvL666psPYGXYHE7eVDelQtb4Eu0SOtmvABS43BWLEs/XAQ7Bn+/+0cuf9J/x0OGu5L5SGSUqV3+bPwWYM2ZFd5Lz6xpbw8PJFxluCgYo/2Qqs3PgkOR5MhQw76zTNGX4L7Ep9Mt1tXmzkQk0NpeUv3b7T682qoAD++gKA08q3I9PYpWM24IhorTHQ7mjy0BaCMZVAwORY92U/JoVf4MztFuBd0umyLWC5BsRbMYkfcQK8vhbT7GdFSkDldMsbSKWO32Z+w0Z+8/PZbBHN0K+dxGjG207yNaosoJ8Xd8IOQSPTxqVqlMN7IQy/792xI6NcTx4WSQzYTpwoRon7moz7Zjd9tL9EkDlIKquUnXQuqW+UlLjR9z1egxvoa4gSnEDZnWfbd63JN2gwor5bHTBMDNRAisly2C1KNYnvwR+0l/4yYDztEs45+cevfuI59Uq4tyQfb5zlC3K/BHMfTsdz+o3IRGsZzm6yLJACbHVTryylbGFJrLvUIDrtieUdXSz7Ml5CbAABqiONS9pCu+rg4EJSxHJzplturXmt3E8spmf7V7pFiBR6awv1hpVYJrU9vY4YczuKfnd7kjPzRel+y046RfT5rvGfmro0/yeqkGAh7tNMJ7l79qX/+a/AoxWKHv5JNpJ0SJ27TLYHBBCMm4c4yqt+buzlhmfAr0xq4h/q3Qe5zPngwnivk2s631ffZhzHd1qDXT6JlGOyd+hEz986A3t69o4SspICUIK+kTaYoBai1rTEOihz7mRAXJpLBHGSETAoEUpw0LbPFqOUFOiHiWM7b2ighnY7eXKRC9VcxDccuGdHynlVC1GaYohYaeun9+0yw3t6i5AeuTy60Hl76DE9aKFZhloX3L1EysYq+otpaAk+8Hhj0VEJeokx/uCaCBiF/2fpiKFF8VUGS3/Sf0au9vyCsyHS7USGYQemUr0sxOi8qujszIfVX1DtY33xepXyxyOjp8aCeb+pI0bkbjjWhaRZEiKjtyVkkz6AUiS62QmL2+HWt9ldbKDizZhCfo5osFYY5/5VPUv401vJxJpCNVMlFgrZ4sciJDTksGc3cUMWeyUQ6yeGjdS0Cf4NBo5T8MQlAw4SsHg2bP/Dx3c3q/X5YUtifaNhdlj5zy2ygAAAAAA=);
+    background-position: 20px 50%;
+    background-size: 9%;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0px 3px rgb(74 74 74);
+    height: 60px;
+    width: 389px;
+    font-size: -8.5rem;
+    border: 0;
+    height: 37px;
+    outline: none;
+    /* border-image-width: 46px; */
+}
+
+
+.main {
+  border:none;
+  width: 60%px;
+  margin: 22px 80px 24px 169px;
+}

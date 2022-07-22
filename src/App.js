@@ -1,7 +1,11 @@
 
 import './App.css';
-import Cardcarousel from './Cardcarousel';
-//  import Footerforother from './Footerforother';
+//import Cardcarousel from './Cardcarousel';
+// import Homepage from './Homepage';
+// import MainRoute from './MainRoute';
+//import Page1 from './Page1';
+// import Footerforother from './Footerforother';
+import Homepage from './Homepage';
 // import Footer from './Footer';
 //  import Homepage from './Homepage';
 
@@ -10,12 +14,14 @@ import Cardcarousel from './Cardcarousel';
 function App() {
   return (
     <div className="App">
-     
+      {/* <MainRoute/> */}
+     {/* <Page1/> */}
       {/* <Footer/>  */}
       {/* <ThingsToDo/> */}
     {/* <Footerforother/> */}
-
- <Cardcarousel/>
+    <Homepage/>
+{/*  */}
+ {/* <Cardcarousel/> */}
     </div>
   );
 }

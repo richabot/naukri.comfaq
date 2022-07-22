@@ -7,6 +7,7 @@ import { faPencil,faHeart,faBell } from '@fortawesome/free-solid-svg-icons'
 //import Carousel from 'react-grid-carousel'
 // import list from './data'
 import "./Slider.css"
+import "./ThingsToDO.css"
 //import list2 from './data1'
 const ThingsToDo = () => {
   return (
@@ -17,7 +18,7 @@ const ThingsToDo = () => {
         <div id="top-nav-container">
             <div class="logo">
                 <img class="logo-img" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="trip advisor logo: owl eyes and beak" />
-                <input type="text" placeholder={<FontAwesomeIcon icon={faHeart} />} />
+                <input type="text" className='search-1' />
             </div>
 
             <ul class="nav-link-container">

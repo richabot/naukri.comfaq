@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 ////import {Carousel} from 'react-responsive-carousel'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -7,15 +7,46 @@ import Carousel from 'react-grid-carousel'
 import list from './data'
 import "./Slider.css"
 import list2 from './data1'
+import { useNavigate } from 'react-router-dom';
+//import Page2 from './Page2';
 const Homepage = () => {
+    const [text, setText] = useState('');
+    const [filter,setFilter]=React.useState("blur(0px)");
+    const [filter1,setFilter1]=React.useState("blur(0px)");
+    const [backgroundColor, setBackgroundColor] =useState();
+    const [on,seton]=useState(false)
+    let navigate = useNavigate();
+    
+    const handleKeyDown = (event) => {
+      
+        if (event.key === "Enter") {
+            
+           
+          setText(event.target.value);
+          
+    navigate("/page2")
+
+     seton(true)
+        }
+
+    }
+    console.log(text)
+    console.log(on)
   return (
    <div >
     {/* start of  header */}
     
     {/* end of header */}
 
-     <div className='main'>
-     <div id="navbar">
+     <div className='main' 
+        onBlur={() =>setFilter("blur(0px)"  ) }
+        
+        onFocus={() => setFilter("blur(9px)"  ) }
+        style={{
+          filter
+            
+        }} >
+     <div id="navbar" >
         <div id="top-nav-container">
             <div class="logo">
                 <img class="logo-img" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="trip advisor logo: owl eyes and beak" />
@@ -100,9 +131,7 @@ const Homepage = () => {
        
     </div>
         <div className="header">
-    <form action="">
-        <input type="text" className="search-bar" placeholder="Where to?" />
-    </form>
+    
 </div>
 <div id="tripadvisor-ukraine-ad" className="two-column-ad-container bg-beige">
             <img className="ad-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/d1/b8/69/caption.jpg?w=1200&h=-1&s=1&cx=707&cy=658&chk=v1_cf0d131fe02c5b35d48c" alt="Man at world center booth holding plate of food"/>
@@ -116,6 +145,7 @@ const Homepage = () => {
                 <a href="/" id="tripadvisor-ukraine-ad-button" className="ad-button text-white bg-black">Join Us</a>
             </div>
         </div>
+        
     {/* slider */}
     <div className="fourth_box">
     <h2 className='left'>You might like these </h2>
@@ -222,6 +252,22 @@ const Homepage = () => {
 </div>
 
 
+    </div>
+
+    <div>
+        {/* <input type="text" className="search-bar" placeholder="Where to?" onKeyPress={handleKeyDown}
+            defaultValue={text}/> */}
+             <input type="" className="search-bar" placeholder='Where to?' onKeyPress={handleKeyDown}
+            defaultValue={text} 
+             onBlur={() =>setBackgroundColor('pink') && setFilter1('blur(2px) !important')  }
+        
+             //onFocus={() => setFilter1("blur(0px) !important"  ) }
+             onFocus={() => setBackgroundColor('orange')}
+            style={{
+              
+                backgroundColor,
+                filter1
+            }} />
     </div>
 <div className='lastpart'>
 <div className='container'>

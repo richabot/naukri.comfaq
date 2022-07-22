@@ -1,45 +1,41 @@
-.foot{
-    
-    display: flex;
-    justify-content: space-around;
+footer {
+  background-color: #faf1ed;
+  padding: 30px 0;
+  text-align: left;
 }
-   
-
-
-
-.spantag{
-    font: 2px;
-}
-.child{
-    display: flex;
-    font-size: 20px;
-}
-.child1{
-    text-decoration: underline;
-
+footer section {
+  display: flex;
 }
 
-.lastbox{
-  
-    box-sizing: border-box;
-    width: 621px;
-    height: 30px;
-    font-size: 11px;
-    color: darkgrey
+.currancy {
+  flex: 1;
 }
-.mother{
-    display: flex;
+footer img {
+  width: 40px;
+  margin-right: 30px;
 }
 
-.input1{
-    width: 126px;
-    height: 24px;
-    margin: 13px 11px 0px 0px;
+.currancy {
+  display: flex;
 }
-.main1{
+.currancy > div {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+  border: solid gray 1px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  flex: 1;
+  margin-left: 5px;
+}
 
-    height: 150px;
-    /* margin: 22px 80px 24px 169px; */
-    background: #faf1ed;
-    width: 100%;
+.link-footer {
+  flex: 4;
+}
+
+footer p {
+  font-size: 11px;
+  margin-top: 5px;
+  width: 70%;
 }
