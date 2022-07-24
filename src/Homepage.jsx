@@ -1,297 +1,462 @@
-import React, { useState } from 'react'
+import "./Homepage.css"
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 ////import {Carousel} from 'react-responsive-carousel'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faPencil,faHeart,faBell,faBed,faKey,faList,faSpoon,faMessage,faCircleDot } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass ,faUser,faHeart,fasearch, faSearch,faHand} from '@fortawesome/free-solid-svg-icons'
+
 import Carousel from 'react-grid-carousel'
-import list from './data'
-import "./Slider.css"
-import list2 from './data1'
-import { useNavigate } from 'react-router-dom';
-//import Page2 from './Page2';
+
 const Homepage = () => {
-    const [text, setText] = useState('');
-    const [filter,setFilter]=React.useState("blur(0px)");
-    const [filter1,setFilter1]=React.useState("blur(0px)");
-    const [backgroundColor, setBackgroundColor] =useState();
-    const [on,seton]=useState(false)
-    let navigate = useNavigate();
+  
     
-    const handleKeyDown = (event) => {
-      
-        if (event.key === "Enter") {
-            
-           
-          setText(event.target.value);
-          
-    navigate("/page2")
-
-     seton(true)
-        }
-
-    }
-    console.log(text)
-    console.log(on)
   return (
    <div >
-    {/* start of  header */}
-    
-    {/* end of header */}
-
-     <div className='main' 
-        onBlur={() =>setFilter("blur(0px)"  ) }
-        
-        onFocus={() => setFilter("blur(9px)"  ) }
-        style={{
-          filter
-            
-        }} >
-     <div id="navbar" >
-        <div id="top-nav-container">
-            <div class="logo">
-                <img class="logo-img" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="trip advisor logo: owl eyes and beak" />
-                
-            </div>
-
-            <ul class="nav-link-container">
-                <li class="top-nav-link">
-                  
-                </li>
-                <li class="top-nav-link">
-                    <a href="/">
-                        <span>
+   
+<div className="blue">
+    <h1 className="hi">Hi, How Can We Help You ?</h1>
+   <div className="flex1">
+   <input type="text" name=""  className="input1"  placeholder="Search by keyword" id="" />
+      <div className="glass">
 
  
- <FontAwesomeIcon icon={faPencil} /></span>
-                        <span>Review</span>
-                    </a>
-                </li>
-                <li class="top-nav-link">
-                    <a href="/">
-                        <span>
-                        <FontAwesomeIcon icon={faHeart} />
-                        </span>
-                        <span>Trips</span>
-                    </a>
-                </li>
-                <li class="top-nav-link">
-                    <a href='/'>
-                        <span> <FontAwesomeIcon icon={faBell} /></span>
-                        <span>Alerts</span>
-                    </a>
-                </li>
-                <li class="top-nav-link" className="sign">
-                    <button href="" class="text-white">
-                        Sign In
-                    </button>
-                </li>
-            </ul>
-        </div>
-        </div>
-        <div id="bottom-nav-container">
-            <ul class="nav-link-container">
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Hotels</span>
-                        <span> <FontAwesomeIcon icon={faBed} /></span>
-                    </a>
-                </li>
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Vacation Rentals</span>
-                        <span> <FontAwesomeIcon icon={faKey} /></span>
-                    </a>
-                </li>
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Things to Do</span>
-                        <span> <FontAwesomeIcon icon={faList} /></span>
-                    </a>
-                </li>
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Restaurants</span>
-                        <span> <FontAwesomeIcon icon={faSpoon} /></span>
-                    </a>
-                </li>
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Travel Forums</span>
-                        <span> <FontAwesomeIcon icon={faMessage} /></span>
-                    </a>
-                </li>
-                <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>More</span>
-                        <span> <FontAwesomeIcon icon={faCircleDot} /></span>
-                    </a>
-                </li>
-            </ul>
+<FontAwesomeIcon className="magnify"icon={faMagnifyingGlass} /></div>
+   </div>
+</div>
+<div className="darkblue">
+    <img  className="rocket" src="https://static.naukimg.com/s/4/110/i/rocket.png" alt="" />
 
-       
-    </div>
-        <div className="header">
+    <h1 className="hi2">QUICK SOLUTION</h1>
+    <h3 className="h1ptag">as per the recent search trend</h3>
+    <div className="flex2">
+<div className="flex3">
+    <div className="q">Q</div>
+        <div className="quick1">How can I delete Naukri account</div>
     
+    
+    </div> 
+    <div className="flex3" > <div className="q">Q</div>
+        <div  className="text quick1">How can I update/edit my Profile</div></div>
+           {/* <div>I do now want any current employer to have access to my profile.How can i block a recruiter?</div> */}
+    <div className="flex3"> <div className="q">Q</div>
+        <div  className="quick1">Do i need to apply to a job or get an interview call?Recruiter asking me to pay to schedule interview for job</div></div>
+        <div className="flex3"> <div className="q">Q</div>
+        <div className="quick1">How can i delete someelse account</div></div>
+        {/* <div>How can I update/edit my Profile</div>
+        <div>Do i need to apply to a job or get an interview call?Recruiter asking me to pay to schedule interview for job</div> */}
+    </div>
 </div>
-<div id="tripadvisor-ukraine-ad" className="two-column-ad-container bg-beige">
-            <img className="ad-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/d1/b8/69/caption.jpg?w=1200&h=-1&s=1&cx=707&cy=658&chk=v1_cf0d131fe02c5b35d48c" alt="Man at world center booth holding plate of food"/>
-            <div id="tripadvisor-ukraine-ad-caption" className="ad-caption">
-                <div className="ad-logo">
-                    <img className="logo-img1" src="data:image/webp;base64,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" alt="trip advisor logo: owl eyes and beak"/>
-                    <h3>Tripadvisor Foundation</h3>
-                </div>
-                <h1>Support Ukrainian Relief Efforts</h1>
-                <p>World Central Kitchen and their hundreds of restaurant partners continue to feed families impacted by the crisis in Ukraine. Join us as we support these ongoing efforts serving millions of meals in the region.</p>
-                <a href="/" id="tripadvisor-ukraine-ad-button" className="ad-button text-white bg-black">Join Us</a>
-            </div>
+
+<br />
+<br /><br />
+<div className="browsebox">
+    <h1 className="browseh1">BROWSE BY TOPIC</h1>
+    <div className="flexit">
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faUser}/> */}
+            <img className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719610_icon-6.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
         </div>
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faSearch}/> */}
+            <img  className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719696_icon-2.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
+        </div>
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faHand}/> */}
+            <img  className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719713_icon-5.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
+        </div>
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faUser}/> */}
+            <img  className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719733_icon-4.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
+        </div>
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faUser}/> */}
+            <img  className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719780_icon-1.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
+        </div>
+        <div>
+            {/* <FontAwesomeIcon className="one" icon={faUser}/> */}
+
+            <img  className="imgicon" src="https://static.naukimg.com/s/4/110/i/1552719808_icon-8.png" alt="" />
+            <h1 className="iconh1">Create Naukri Profile</h1>
+        </div>
+    
+    </div>
+</div>
+
+<br />
+<br /> <br /> <br />
+<div className="fourth_box">
+   <h1 className="hi1">Our Blogs</h1>
+   <h1 className="h1ptag" >Maximizing Your career Potential</h1>
+   <div className="boxbest">
+   <Carousel cols={3} rows={1} gap={10} loop
+    >
+
+    
+<Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="https://static.naukimg.com/s/4/110/i/1552719014_interview-skills.jpg" alt="" />
+            <div className="like-logo ">
+           
+              <i class="fa fa-heart" aria-hidden="true"></i>
+           
+            </div>
+    
+            
+          </div>
+          <a  href="/"><p  className="interview">Interview Advice</p></a>
+         
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="https://static.naukimg.com/s/4/110/i/1552718943_business-analyst.jpeg" alt="" />
+            <div className="like-logo ">
+           {/* <span className='heart'> 🤍</span> */}
+              {/* <i class="fa-regular fa-heart"></i> */}
+              <FontAwesomeIcon  className="heart"icon={faHeart} />
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon="fa-solid fa-heart" /> */}
+              {/* <FontAwesomeIcon icon={faHeart}/> */}
+              {/* <FontAwesomeIcon  icon="fa-thin fa-heart" /> */}
+              {/* <FontAwesomeIcon  class="fa">&#xf08a;</FontAwesomeIcon> */}
+            </div>
+    
+            
+          </div>
+          <a href="/"><p className="interview">Interview Address</p></a>
+         
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="https://static.naukimg.com/s/4/110/i/1552719134_cv-resume-difference.jpg" alt="" />
+            <div className="like-logo ">
+           {/* <span className='heart'> 🤍</span> */}
+              {/* <i class="fa-regular fa-heart"></i> */}
+              <FontAwesomeIcon  className="heart"icon={faHeart} />
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon="fa-solid fa-heart" /> */}
+              {/* <FontAwesomeIcon icon={faHeart}/> */}
+              {/* <FontAwesomeIcon  icon="fa-thin fa-heart" /> */}
+              {/* <FontAwesomeIcon  class="fa">&#xf08a;</FontAwesomeIcon> */}
+            </div>
+    
+            
+          </div>
+          <a href="/"><p className="interview">Interview Address</p></a>
+         
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="https://static.naukimg.com/s/4/110/i/1552719088_how-to-neotiate-salary.jpeg" alt="" />
+            <div className="like-logo ">
+           {/* <span className='heart'> 🤍</span> */}
+              {/* <i class="fa-regular fa-heart"></i> */}
+              <FontAwesomeIcon  className="heart"icon={faHeart} />
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon="fa-solid fa-heart" /> */}
+              {/* <FontAwesomeIcon icon={faHeart}/> */}
+              {/* <FontAwesomeIcon  icon="fa-thin fa-heart" /> */}
+              {/* <FontAwesomeIcon  class="fa">&#xf08a;</FontAwesomeIcon> */}
+            </div>
+    
+            
+          </div>
+          <a href="/"><p className="interview">Interview Address</p></a>
+         
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="" alt="" />
+            <div className="like-logo ">
+           {/* <span className='heart'> 🤍</span> */}
+              {/* <i class="fa-regular fa-heart"></i> */}
+              <FontAwesomeIcon  className="heart"icon={faHeart} />
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon="fa-solid fa-heart" /> */}
+              {/* <FontAwesomeIcon icon={faHeart}/> */}
+              {/* <FontAwesomeIcon  icon="fa-thin fa-heart" /> */}
+              {/* <FontAwesomeIcon  class="fa">&#xf08a;</FontAwesomeIcon> */}
+            </div>
+    
+            
+          </div>
+          <a href="/"><p className="interview">Interview Address</p></a>
+         
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    {/* <div className="flexit" key={item.id}>
+   <div className='container'>
+   <img className="imagefix" src={item.img} alt="abc" />
+   <p className="top-left">🤍</p>
+     
+   </div>
+  
+      <h3>{item.title}</h3>
+      <p className="ptagfix"> {item.price}</p>
+      <div className="carrousel-reviews">
+         
+              <p>{item.amount}</p>
+            </div>
+    </div> */}
+     <section  className="flexit"  class="carousel">
+        <div class="card">
+          <div className='container'>
+            <img className="imagefix" src="" alt="" />
+            <div className="like-logo ">
+           {/* <span className='heart'> 🤍</span> */}
+              {/* <i class="fa-regular fa-heart"></i> */}
+              <FontAwesomeIcon  className="heart"icon={faHeart} />
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon="fa-solid fa-heart" /> */}
+              {/* <FontAwesomeIcon icon={faHeart}/> */}
+              {/* <FontAwesomeIcon  icon="fa-thin fa-heart" /> */}
+              {/* <FontAwesomeIcon  class="fa">&#xf08a;</FontAwesomeIcon> */}
+            </div>
+    
+            
+          </div>
+          <a href="/"><p className="interview">Interview Address</p></a>
+          <div class="ranking">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p className='pricetag'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, repudiandae. Perspiciatis quaerat, deleniti deserunt consectetur magni ea at doloremque dolorem quis ipsa eligendi fuga quae sed modi eum alias ipsum.
+            </p>
+          </div>
+         
+          <div className="carrousel-reviews">
+         
+       
+       </div>
+        </div>
+        </section>
+  </Carousel.Item>
+
+
+{/* ... */}
+</Carousel>
+   </div>
+</div>
+
+
+<div className="lastbox">
+    <div >
+      <div className="box23">
+      <h1 className="left12">  ✉ Naukri FastForward Services</h1>
+        <p className="pwhite">Toll Free Number: 1800-102-5557 , 1800-572-5557
+            <br />
+           Work Timings: 9.30 AM to 6.30 PM
+           <br />
+           Working Days: (Monday to Saturday)</p>
+        <div>
+        <p className="p2">Email Id: service@naukri.com
+      <br />
+International Clients: +91 120 4021100 (9.30 AM to 6.00 PM IST)</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="whiteform">
+        <h1 className="report">Report a Problem/Need Assistance</h1>
+        <form action="" className="formit">
+            <input className="input2" type="text" name="" id=""  placeholder="Enter Your Name"/>
+          <br />
+          <br />
+           <div className="displayflex">
+          <div>
+          <input type="text" name=""  className="input3" id="" placeholder="Enter Your UserName/Email" />
         
-    {/* slider */}
-    <div className="fourth_box">
-    <h2 className='left'>You might like these </h2>
-    <p className='left'>More things to do in Hyderabad</p>
-   <div className="boxbest">
-   <Carousel cols={4} rows={1} gap={5} loop
-    >
-{list.map((item) => {
- return(
-  <Carousel.Item>
-    <div className="flexit" key={item.id}>
-   <div className='container'>
-   <img className="imagefix" src={item.img} alt="abc" />
-   <p className="top-left">🤍</p>
-     
-   </div>
-  
-      <h3>{item.title}</h3>
-      <p className="ptagfix"> {item.price}</p>
-      <div className="carrousel-reviews">
-         
-              <p>{item.amount}</p>
-            </div>
-    </div>
-  </Carousel.Item>
-      )
-}
-)}
-{/* ... */}
-</Carousel>
-   </div>
-</div>
-{/* slide end */}
-<div className="fourth_box">
-    <h2 className='left1'>Top experiences in Tripadvisor </h2>
-   
-   <div className="boxbest">
-   <Carousel cols={4} rows={1} gap={5} loop
-    >
-{list.map((item) => {
- return(
-  <Carousel.Item>
-    <div className="flexit" key={item.id}>
-   <div className='container'>
-   <img className="imagefix" src={item.img} alt="abc" />
-   <p className="top-left">🤍</p>
-     
-   </div>
-  
-      <h3>{item.title}</h3>
-      <p className="ptagfix"> {item.price}</p>
-      <div className="carrousel-reviews">
-         
-              <p>{item.amount}</p>
-            </div>
-    </div>
-  </Carousel.Item>
-      )
-}
-)}
-{/* ... */}
-</Carousel>
-   </div>
-</div>
-
-
-
-<div className='pink'>
-    <div>
-        <h2 className='pinkh2'>Get out here</h2>
-        <p className='pinkp1'>Best of best tours ,attraction and activites you dont want to miss</p>
-        <button className='pinkbtn'>See the list</button>
-    </div>
-    <img  className="pinkimg" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f7/1d/4d/caption.jpg?w=1000&h=-1&s=1" alt="" />
-</div>
-<div className="fourth_box">
-    <h2 className='leftrech1'>Top destinations for beach lovers </h2>
-    <p className='leftrec'>Recommended based on your activity</p>
-   <div className="boxbest">
-   <Carousel cols={4} rows={1} gap={5} loop
-    >
-{list2.map((item) => {
- return(
-  <Carousel.Item>
-    <div className="flexit" key={item.id}>
-  
-  <div className='container'>
-  <img className="imagefix" src={item.img} alt="abc" />
-  
-     
-
-  
-  <h3 className='bottom-right'>{item.title}</h3>
-  </div>
+          </div>
+          <div>
+          <input type="text" name="" className="nput3 input4" id="" placeholder="Enter Your Contact Number" />
+        
+          </div>
+           </div>
       
-    </div>
-  </Carousel.Item>
-      )
-}
-)}
-{/* ... */}
-</Carousel>
-   </div>
-</div>
+        <input type="text" name="" className="input2" id="" placeholder="Select Area of Concern" />
+        <br />
+           <input type="text"  className="input2 " name="" id="" placeholder="Enter Your Feedback" />
+           <br />
+           <input type="submit" className="btnblue" name="Submit" id="" />
 
-
+        </form>
     </div>
-
-    <div>
-        {/* <input type="text" className="search-bar" placeholder="Where to?" onKeyPress={handleKeyDown}
-            defaultValue={text}/> */}
-             <input type="" className="search-bar" placeholder='Where to?' onKeyPress={handleKeyDown}
-            defaultValue={text} 
-             onBlur={() =>setBackgroundColor('pink') && setFilter1('blur(2px) !important')  }
-        
-             //onFocus={() => setFilter1("blur(0px) !important"  ) }
-             onFocus={() => setBackgroundColor('orange')}
-            style={{
-              
-                backgroundColor,
-                filter1
-            }} />
-    </div>
-<div className='lastpart'>
-<div className='container'>
-<img  className="last" src="https://static.tacdn.com/img2/cpm/home_page_shelf_backfills/Booking_300x600.jpg" alt="" />
-<div className='boxsize centered'>
-<p className='centered'>Where can we rent bicycles and ride on flat surfaces</p>
-</div>
-</div>
-</div>
-<br />
-<br />
-<br />
-<div className='green'>
-<div className='green1'>
-    <div> 
-         <img className='owl' src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg" alt="" />
-
-       <div className='box'>  <h1>Travellers' Choice Best of the Best</h1></div>
-
-    </div>
-    <div>
-         <img className='owlside' src="https://static.tacdn.com/img2/brand/feed/tc_cards_desktop.jpeg" alt="" />
-    </div>
-</div>
 </div>
    </div>
 
